@@ -69,6 +69,7 @@
         </div>
         <h1>Modals</h1>
         <button onclick="Telegram.WebApp.showAlert('Hello World!');">Launch Alert</button>
+        <button onclick="Telegram.WebApp.showAlert(JSON.stringify(window.Telegram.WebApp));">Show info</button>
         <button onclick="showPopup();">Launch Popup</button>
 
         <h1>Links</h1>
@@ -109,6 +110,11 @@
             Telegram.WebApp.showAlert('Main Button was clicked')
         });	
         Telegram.WebApp.MainButton.show();
+
+        console.log('telegram info');
+        console.log('--');
+        console.log(JSON.stringify(window.Telegram.WebApp));
+        console.log('--');
 
         // Function to call showPopup API
         function showPopup() {
